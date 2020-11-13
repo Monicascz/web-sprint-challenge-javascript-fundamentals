@@ -129,6 +129,8 @@ console.log("TASK 2 FILTER",lowPopulationAnimals(zooAnimals));
   function greeting(fname, lname){
    return `Hello ${fname} ${lname}, nice to meet you!`;
   }
+
+  
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -221,9 +223,15 @@ console.log(cuboidTwo.surfaceArea()); // 130
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
-
-
+class CubeMaker extends CuboidMaker {
+  constructor(attributes){
+  super(attributes);
+  }
+  cubeVolume(){
+    return Math.pow(this.volume,3);
+  }
+}
+//console.log(CubeMaker.volume(2));
 
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
