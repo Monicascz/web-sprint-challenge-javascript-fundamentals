@@ -76,9 +76,16 @@ console.log("TASK 1 FOREACH",animalNames(zooAnimals));
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
   */
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+ function lowPopulationAnimals(zooAnimals){
+  let lowPopulationAnimals = [];
+    zooAnimals.filter(function(item){
+      if (item.population < 5){
+        lowPopulationAnimals.push(item);
+      }
+    });
+  return lowPopulationAnimals;
+} // closing lowPopulationAnimals Bracket
+console.log("TASK 2 FILTER",lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
